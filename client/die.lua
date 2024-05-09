@@ -1,0 +1,6 @@
+RegisterCommand("die", function(source, args, rawCommand)
+    local playerPed = GetPlayerPed(-1)
+    SetPedArmour(playerPed, 0)
+    SetEntityHealth(playerPed, 0)
+    TriggerClientEvent('KERAxCLS_hud:notify', -1, "#fff", 'NOTIFY', 'Du hast dich selbst umgebracht und wachst gleich beim MD auf!', 15000)
+end)

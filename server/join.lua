@@ -1,0 +1,6 @@
+RegisterNetEvent('esx:playerLoaded')
+AddEventHandler('esx:playerLoaded', function(source)
+	local ped = GetPlayerPed(source)
+	xSource = ESX.GetPlayerFromId(source)  
+	TriggerClientEvent("KERAxCLS_hud:notify", source, "#fff", "KERAxCLS system", "Dein Charakter ist geladen\n Group: ".. firstToUpper(xSource.getGroup()).." !")
+end)
